@@ -5,6 +5,8 @@ A light, simple, and (impractical 🌞) library that uses PHP Attributes feature
 
 > ⚠ Note: this library was made for learning purposes, it's not ready for the production environment.
 
+![Visitors](https://visitor-badge.glitch.me/badge?page_id=nawafinity.php-simple-orm)
+ 
 # Installation
 
 ## 1. Clone the library
