@@ -1,18 +1,18 @@
 
-# About Library
+# About php-simple-orm
 
-A simple PHP ORM library that used PHP 8 Attributes.
+A light, simple, and (impractical 🌞) library that uses PHP Attributes feature.
 
-> Hey, this library made for learning porpoise, not ready for production use.
+> ⚠ Note: this library was made for learning purposes, it's not ready for the production environment.
 
-## Installation
+# Installation
 
-### 1. Clone the library
+## 1. Clone the library
 ```bash
 git clone https://github.com/nawafinity/php-simple-orm.git
 ```
 
-### 2. Run the example
+## 2. Run the example
   ```bash
   cd path/to/php-simple-orm/example
   composer install
@@ -20,9 +20,9 @@ git clone https://github.com/nawafinity/php-simple-orm.git
   php -S localhost:8000 index.php
   ```
 
-## How to create an entity
+# Using
 
-### 1. Create Entity
+## 1. Create Entity
 
 ```php  
 <?php  
@@ -31,28 +31,29 @@ namespace PhpSimpleOrmExample\Entities;
 use Nawafinity\PhpSimpleOrm\Attributes\Entity;  
 use Nawafinity\PhpSimpleOrm\PhpSimpleOrm;  
   
-#[Entity(name: 'employs')]  
+#[Entity(name: 'employees')]  
 class Employee extends PhpSimpleOrm {  
   
- #[Column(type: 'uuid', name: 'id')] public string $id;
+ #[Column(type: 'uuid', name: 'id')]
+ public string $id;
  
  }  
 ```  
 
-### 2. Create an object
+## 2. Create an entity's object
 ```php  
 <?php  
 namespace PhpSimpleOrmExample\Entities;  
   
 $employee = new Employee();  
   
-$employee->select()  
+$result = $employee->select()  
  ->where('name', '=', 'Something') ->toSQL();  
 ```  
 
-### 3. Expected output when you print the result
+## 3. Expected output when you print the `$result`
 ```mysql
-SELECT id, name FROM `students` WHERE `name`='Something'
+SELECT id, name FROM `employees` WHERE `name`='Something'
 ```  
 
 ## References
