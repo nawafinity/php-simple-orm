@@ -51,11 +51,11 @@ $employee->select()
 ```  
 
 ### 3. Expected output when you print the result
-```  
-"SELECT id, name FROM `students` WHERE `name`='Something'"  
+```mysql
+SELECT id, name FROM `students` WHERE `name`='Something'
 ```  
 
 ## References
-[PHP Attributes](https://www.php.net/manual/en/language.attributes.overview.php)
-[PHP Reflection](https://www.php.net/manual/en/book.reflection.php)
-[Laravel Package Generator](https://laravelpackageboilerplate.com/)
+1. [PHP Attributes](https://www.php.net/manual/en/language.attributes.overview.php)
+2. [PHP Reflection](https://www.php.net/manual/en/book.reflection.php)
+3. [Laravel Package Generator](https://laravelpackageboilerplate.com/)
